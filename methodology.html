@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methodology | CRISP-DM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+    <nav class="bg-indigo-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-bold text-xl tracking-wider uppercase">Data Science Portal</div>
+            <div class="flex space-x-6 font-medium">
+                <a href="index.html" class="hover:text-yellow-400">Home</a>
+                <a href="methodology.html" class="border-b-2 border-yellow-400 text-yellow-400 pb-1">Methodology</a>
+                <a href="example.html" class="hover:text-yellow-400">Case Study</a>
+                <a href="about.html" class="hover:text-yellow-400">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow px-6 py-12 max-w-6xl mx-auto">
+        <h1 class="text-3xl font-bold text-indigo-900 mb-8 uppercase text-center">Methodology Overview</h1>
+        
+        <div class="grid lg:grid-cols-2 gap-12 mb-16">
+            <div class="space-y-4">
+                <h2 class="text-xl font-bold text-indigo-800">Purpose & Applications</h2>
+                <p class="text-gray-600 text-sm">CRISP-DM is used to standardize the data mining process. It ensures that technical activities are always aligned with business goals, making it the preferred choice for large-scale enterprise projects.</p>
+                
+                <div class="space-y-3">
+                    <div class="p-3 bg-white shadow rounded border-l-4 border-indigo-600 text-xs">
+                        <h4 class="font-bold">1. Business Understanding</h4>
+                        <p>Defining project objectives and requirements from a business view.</p>
+                    </div>
+                    <div class="p-3 bg-white shadow rounded border-l-4 border-indigo-600 text-xs">
+                        <h4 class="font-bold">2. Data Understanding</h4>
+                        <p>Initial data collection and quality checking.</p>
+                    </div>
+                    <div class="p-3 bg-white shadow rounded border-l-4 border-indigo-600 text-xs">
+                        <h4 class="font-bold">3. Data Preparation</h4>
+                        <p>Cleaning and formatting data for modeling (takes ~80% of time).</p>
+                    </div>
+                    <div class="p-3 bg-white shadow rounded border-l-4 border-indigo-600 text-xs">
+                        <h4 class="font-bold">4. Modeling</h4>
+                        <p>Applying mathematical and statistical algorithms.</p>
+                    </div>
+                    <div class="p-3 bg-white shadow rounded border-l-4 border-indigo-600 text-xs">
+                        <h4 class="font-bold">5. Evaluation</h4>
+                        <p>Verifying if the results meet the initial business goals.</p>
+                    </div>
+                    <div class="p-3 bg-white shadow rounded border-l-4 border-indigo-600 text-xs">
+                        <h4 class="font-bold">6. Deployment</h4>
+                        <p>Delivering final insights or systems to the end-users.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 shadow-xl rounded-2xl">
+                <h3 class="text-center font-bold text-gray-400 mb-4 uppercase text-xs">Iterative Process Diagram</h3>
+                <img src="CRISP-DM-1.png" alt="CRISP-DM Cycle" class="w-full h-auto">
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-indigo-900">
+                <h3 class="font-bold mb-4 uppercase text-indigo-900">Advantages & Limitations</h3>
+                <ul class="text-sm space-y-2 text-gray-600">
+                    <li><span class="text-green-600 font-bold">PRO:</span> Flexible and iterative; allows teams to move backwards if data is poor.</li>
+                    <li><span class="text-green-600 font-bold">PRO:</span> Strong focus on business ROI rather than just technology.</li>
+                    <li><span class="text-red-600 font-bold">CON:</span> Can be time-consuming due to the heavy data preparation phase.</li>
+                    <li><span class="text-red-600 font-bold">CON:</span> Might feel linear for modern "Agile" software development.</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-yellow-500">
+                <h3 class="font-bold mb-4 uppercase text-indigo-900">Industry Adoption</h3>
+                <p class="text-sm text-gray-600 mb-4">Commonly used by leaders in these sectors:</p>
+                <div class="grid grid-cols-2 gap-3 text-xs font-bold">
+                    <div class="bg-indigo-50 p-2 rounded text-indigo-700">Retail (Amazon, Walmart)</div>
+                    <div class="bg-indigo-50 p-2 rounded text-indigo-700">Finance (HSBC, JP Morgan)</div>
+                    <div class="bg-indigo-50 p-2 rounded text-indigo-700">Telecom (AT&T, Maxis)</div>
+                    <div class="bg-indigo-50 p-2 rounded text-indigo-700">Healthcare (Pfizer)</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-gray-900 text-gray-400 py-6 text-center text-sm">        IMC11203 Introduction To Computing & Data Science | Universiti Malaysia Perlis &copy; 2025/2026
+</footer>
+</body>
+</html>
