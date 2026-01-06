@@ -6,7 +6,10 @@
     <title>About | CRISP-DM Portal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .hidden-content { display: none; }
+        #secretMessage {
+            display: none;
+            transition: all 0.3s ease-in-out;
+        }
     </style>
 </head>
 <body class="bg-gray-50 flex flex-col min-h-screen">
@@ -33,22 +36,23 @@
                     
                     <div class="text-center">
                         <h1 class="text-3xl font-bold text-gray-900 uppercase">NURUL SYAFIKAH BINTI MOHAMAD NOORUL ALAM</h1>
-                        
                         <p id="greeting" class="text-sm font-bold text-orange-500 mt-2 tracking-wide"></p>
 
                         <p class="text-indigo-600 font-semibold mb-2">Student ID: 251592001</p>
                         <p class="text-gray-500 text-sm mb-6">Bachelor of Data Science (Artificial Intelligence)<br>Universiti Malaysia Perlis (UniMAP)</p>
                         
                         <div class="max-w-2xl mx-auto bg-indigo-50 p-6 rounded-2xl text-gray-700 leading-relaxed mb-8">
-                            "Hi! I am a <strong>Semester 1 Data Science student</strong>. This portal was developed as part of my <strong>IMC11203 Introduction to Computing & Data Science</strong> assignment to showcase the application of the CRISP-DM methodology in solving real-world data challenges."
+                            "Hi! I am a <strong>Semester 1 Data Science student</strong>. This portal was developed as part of my <strong>IMC11203 Introduction to Computing & Data Science</strong> assignment to showcase the application of the CRISP-DM methodology."
                         </div>
 
                         <div class="mb-10">
-                            <button id="revealBtn" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-full text-sm font-semibold transition-all shadow-md">
-                                Click to Reveal My Goal 🚀
+                            <button id="revealBtn" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-full text-sm font-semibold transition-all shadow-md active:scale-95">
+                                Why did I choose this course? 🤔
                             </button>
-                            <div id="secretMessage" class="hidden-content mt-4 p-4 bg-yellow-50 border-l-4 border-yellow-400 text-gray-700 italic rounded-r-lg max-w-md mx-auto">
-                                "Honestly? Because everyone says <strong>Data Science is in high demand</strong> right now, so I'm just here to secure my future and hopefully my bank account! 😂"
+                            <div id="secretMessage" class="mt-4 p-5 bg-yellow-50 border-l-4 border-yellow-400 text-gray-700 rounded-r-lg max-w-lg mx-auto shadow-sm">
+                                <p class="italic text-sm leading-relaxed">
+                                    "Honestly? Because everyone says <strong>Data Science is in high demand</strong> right now, so I'm just here to secure my future and hopefully my bank account! 😂 But on a serious note, I'm actually starting to enjoy the magic of data."
+                                </p>
                             </div>
                         </div>
 
@@ -58,26 +62,31 @@
                                 <span class="px-4 py-2 bg-white border border-gray-200 rounded-full text-xs font-bold text-gray-600 shadow-sm">HTML5</span>
                                 <span class="px-4 py-2 bg-white border border-gray-200 rounded-full text-xs font-bold text-gray-600 shadow-sm">Tailwind CSS</span>
                                 <span class="px-4 py-2 bg-yellow-100 border border-yellow-400 rounded-full text-xs font-bold text-yellow-700 shadow-sm">JavaScript (ES6+)</span>
-                                <span class="px-4 py-2 bg-white border border-gray-200 rounded-full text-xs font-bold text-gray-600 shadow-sm">CRISP-DM Framework</span>
+                                <span class="px-4 py-2 bg-white border border-gray-200 rounded-full text-xs font-bold text-gray-600 shadow-sm">CRISP-DM</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="border-t border-gray-100 pt-8 mt-4">
+                    <div class="border-t border-gray-100 pt-8 mt-4 px-4">
                         <h2 class="text-lg font-bold text-indigo-900 mb-6 uppercase text-center tracking-wide">Academic References</h2>
-                        <div class="grid md:grid-cols-2 gap-4 text-left px-4">
-                            <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">
-                                <p class="text-[11px] text-gray-600 italic">Enterprise Knowledge. (2025). The Role of AI in CRISP-DM Framework.</p>
-                            </div>
-                            <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">
-                                <p class="text-[11px] text-gray-600 italic">Data Science PM. (2024). CRISP-DM: Still the Most Popular Methodology.</p>
-                            </div>
-                            <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">
-                                <p class="text-[11px] text-gray-600 italic">Udacity. (2025). CRISP-DM Explained: A Proven Methodology.</p>
-                            </div>
-                            <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">
-                                <p class="text-[11px] text-gray-600 italic">SV Europe. (2025). The 6 Phases of CRISP-DM Framework.</p>
-                            </div>
+                        <div class="grid md:grid-cols-2 gap-4 text-left">
+                            
+                            <a href="https://enterprise-knowledge.com/the-role-of-knowledge-management-in-the-crisp-dm-framework/" target="_blank" class="p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-indigo-300 hover:bg-indigo-50 transition-all block group">
+                                <p class="text-[11px] text-gray-600 italic group-hover:text-indigo-700">Enterprise Knowledge. (2025). The Role of Knowledge Management in CRISP-DM Framework. 🔗</p>
+                            </a>
+
+                            <a href="https://www.datascience-pm.com/crisp-dm-2/" target="_blank" class="p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-indigo-300 hover:bg-indigo-50 transition-all block group">
+                                <p class="text-[11px] text-gray-600 italic group-hover:text-indigo-700">Data Science PM. (2024). CRISP-DM: Still the Most Popular Methodology. 🔗</p>
+                            </a>
+
+                            <a href="https://www.udacity.com/blog/2021/03/crisp-dm-explained.html" target="_blank" class="p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-indigo-300 hover:bg-indigo-50 transition-all block group">
+                                <p class="text-[11px] text-gray-600 italic group-hover:text-indigo-700">Udacity. (2025). CRISP-DM Explained: A Proven Methodology. 🔗</p>
+                            </a>
+
+                            <a href="https://www.sv-europe.com/crisp-dm-methodology/" target="_blank" class="p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-indigo-300 hover:bg-indigo-50 transition-all block group">
+                                <p class="text-[11px] text-gray-600 italic group-hover:text-indigo-700">SV Europe. (2025). The 6 Phases of CRISP-DM Framework. 🔗</p>
+                            </a>
+
                         </div>
                     </div>
                 </div>
@@ -90,31 +99,28 @@
     </footer>
 
     <script>
-        // 1. Dynamic Greeting based on time
         const greetingElement = document.getElementById('greeting');
         const hour = new Date().getHours();
-        let message = "";
+        let greetingMsg = "";
+        if (hour < 12) greetingMsg = "☀️ Good Morning!";
+        else if (hour < 18) greetingMsg = "🌤️ Good Afternoon!";
+        else greetingMsg = "🌙 Good Night!";
+        greetingElement.innerText = greetingMsg;
 
-        if (hour < 12) message = "☀️ Good Morning!";
-        else if (hour < 18) message = "🌤️ Good Afternoon!";
-        else message = "🌙 Good Evening!";
-
-        greetingElement.innerText = message;
-
-        // 2. Click to Reveal Logic
         const revealBtn = document.getElementById('revealBtn');
         const secretMessage = document.getElementById('secretMessage');
 
         revealBtn.addEventListener('click', function() {
             if (secretMessage.style.display === "block") {
                 secretMessage.style.display = "none";
-                revealBtn.innerText = "Click to Reveal My Goal 🚀";
+                revealBtn.innerText = "Why did I choose this course? 🤔";
+                revealBtn.classList.replace('bg-red-500', 'bg-indigo-600');
             } else {
                 secretMessage.style.display = "block";
-                revealBtn.innerText = "Close Goal ❌";
+                revealBtn.innerText = "Just Kidding! 😜 (Close)";
+                revealBtn.classList.replace('bg-indigo-600', 'bg-red-500');
             }
         });
     </script>
 </body>
 </html>
-
