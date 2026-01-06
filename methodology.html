@@ -15,7 +15,7 @@
             background-color: #f0f4ff;
         }
         .active-step {
-            border-left-color: #fbbf24 !important; /* Warna kuning */
+            border-left-color: #fbbf24 !important; 
             background-color: #eef2ff !important;
             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
         }
@@ -113,22 +113,17 @@
 
     <script>
         document.querySelectorAll('.step-card').forEach(card => {
-            // Kesan Hover
             card.addEventListener('mouseenter', function() {
                 const stepNum = this.getAttribute('data-step');
                 const diagram = document.getElementById('main-diagram');
                 const hint = document.getElementById('step-hint');
                 
-                // Reset semua card
                 document.querySelectorAll('.step-card').forEach(c => c.classList.remove('active-step'));
                 
-                // Highlight card aktif
                 this.classList.add('active-step');
                 
-                // Beri kesan pada gambar
                 diagram.classList.add('highlight-diagram');
                 
-                // Tukar teks hint
                 hint.innerText = "Focusing on Step " + stepNum;
                 hint.classList.remove('animate-pulse');
             });
@@ -142,7 +137,6 @@
                 hint.classList.add('animate-pulse');
             });
             
-            // Kesan Klik (Opsional: Alert Info)
             card.addEventListener('click', function() {
                 const stepName = this.querySelector('h4').innerText;
                 console.log("User interested in: " + stepName);
@@ -151,3 +145,4 @@
     </script>
 </body>
 </html>
+
