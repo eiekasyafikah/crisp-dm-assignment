@@ -5,16 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Study | CRISP-DM Application</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Animasi Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body class="bg-gray-50 flex flex-col min-h-screen">
     <nav class="bg-indigo-900 text-white shadow-lg sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="font-bold text-xl tracking-wider uppercase">Data Science Portal</div>
             <div class="flex space-x-6 font-medium">
-                <a href="index.html" class="hover:text-yellow-400">Home</a>
-                <a href="methodology.html" class="hover:text-yellow-400">Methodology</a>
+                <a href="index.html" class="hover:text-yellow-400 transition">Home</a>
+                <a href="methodology.html" class="hover:text-yellow-400 transition">Methodology</a>
                 <a href="example.html" class="border-b-2 border-yellow-400 text-yellow-400 pb-1">Case Study</a>
-                <a href="about.html" class="hover:text-yellow-400">About</a>
+                <a href="about.html" class="hover:text-yellow-400 transition">About</a>
             </div>
         </div>
     </nav>
@@ -22,7 +34,7 @@
     <main class="flex-grow py-12 px-6 max-w-6xl mx-auto">
         <h1 class="text-4xl font-extrabold text-indigo-900 mb-8 text-center uppercase">Retail Churn Case Study</h1>
         
-        <div class="bg-white p-8 rounded-3xl shadow-xl mb-12 border-t-8 border-indigo-900">
+        <div class="bg-white p-8 rounded-3xl shadow-xl mb-12 border-t-8 border-indigo-900 reveal">
             <h2 class="text-2xl font-bold text-gray-800 mb-4 uppercase">1. Problem Statement & Business Goal</h2>
             <p class="text-gray-600 leading-relaxed text-lg">
                 A global retail brand is facing a 15% increase in customer attrition. The goal is to use the <strong>CRISP-DM framework</strong> to identify high-value customers likely to churn and implement a proactive retention strategy using <strong>Knowledge Intelligence</strong>.
@@ -30,45 +42,44 @@
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
-            
-            <div class="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-indigo-600 space-y-4">
+            <div class="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-indigo-600 space-y-4 reveal">
                 <h3 class="font-bold text-indigo-900 uppercase">Phase 1 & 2: Understanding</h3>
                 <div class="text-sm text-gray-700">
                     <p><strong>Data Inputs:</strong> Historical CRM data, Transaction logs (SQL), and Customer Support tickets.</p>
-                    <p class="mt-2"><strong>Actions:</strong> Defined churn as "No purchase in 90 days." Used Exploratory Data Analysis (EDA) to find correlations between discount usage and loyalty.</p>
+                    <p class="mt-2"><strong>Actions:</strong> Defined churn as "No purchase in 90 days." Used Exploratory Data Analysis (EDA) to find correlations.</p>
                 </div>
-                <div class="bg-indigo-50 p-3 rounded font-mono text-[11px] text-indigo-700 uppercase font-bold">
-                    Output: Business Project Charter & Data Quality Audit Report
-                </div>
+                <button onclick="showDetails('Charter')" class="w-full bg-indigo-50 p-3 rounded font-mono text-[11px] text-indigo-700 uppercase font-bold hover:bg-indigo-100 transition">
+                    View Output: Project Charter
+                </button>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-indigo-600 space-y-4">
+            <div class="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-indigo-600 space-y-4 reveal">
                 <h3 class="font-bold text-indigo-900 uppercase">Phase 3: Data Preparation</h3>
                 <div class="text-sm text-gray-700">
-                    <p><strong>Processing Steps:</strong> Handled 5% missing values via median imputation. Integrated Python libraries (Pandas) for data cleaning.</p>
-                    <p class="mt-2"><strong>Feature Engineering:</strong> Created "Recency, Frequency, Monetary (RFM)" scores to quantify customer value.</p>
+                    <p><strong>Processing Steps:</strong> Handled 5% missing values via median imputation. Integrated Python libraries (Pandas).</p>
+                    <p class="mt-2"><strong>Feature Engineering:</strong> Created "Recency, Frequency, Monetary (RFM)" scores.</p>
                 </div>
                 <div class="bg-indigo-50 p-3 rounded font-mono text-[11px] text-indigo-700 uppercase font-bold">
                     Output: Finalized Training Set (CSV/Parquet)
                 </div>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-green-600 space-y-4">
+            <div class="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-green-600 space-y-4 reveal">
                 <h3 class="font-bold text-green-900 uppercase">Phase 4: Modeling</h3>
                 <div class="text-sm text-gray-700">
                     <p><strong>Tools:</strong> Scikit-Learn using Random Forest and XGBoost algorithms.</p>
-                    <p class="mt-2"><strong>Technique:</strong> Hyperparameter tuning via Grid Search to optimize the F1-score for imbalanced churn classes.</p>
+                    <p class="mt-2"><strong>Technique:</strong> Hyperparameter tuning via Grid Search to optimize the F1-score.</p>
                 </div>
                 <div class="bg-green-50 p-3 rounded font-mono text-[11px] text-green-700 uppercase font-bold">
                     Output: Optimized Predictive Model (Pickle file)
                 </div>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-green-600 space-y-4">
+            <div class="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-green-600 space-y-4 reveal">
                 <h3 class="font-bold text-green-900 uppercase">Phase 5: Evaluation</h3>
                 <div class="text-sm text-gray-700">
-                    <p><strong>Metrics:</strong> Achieved 88% Accuracy and 82% Recall. Verified that the model aligns with the business goal of reducing churn.</p>
-                    <p class="mt-2"><strong>Knowledge Intelligence:</strong> Expert review confirmed that predicted "at-risk" features match real-world market trends.</p>
+                    <p><strong>Metrics:</strong> Achieved 88% Accuracy and 82% Recall. Verified model alignment with business goals.</p>
+                    <p class="mt-2"><strong>Knowledge Intelligence:</strong> Expert review confirmed "at-risk" features match market trends.</p>
                 </div>
                 <div class="bg-green-50 p-3 rounded font-mono text-[11px] text-green-700 uppercase font-bold">
                     Output: Model Performance Evaluation Report
@@ -76,26 +87,74 @@
             </div>
         </div>
 
-        <div class="mt-12 bg-indigo-900 text-white p-10 rounded-3xl shadow-2xl relative overflow-hidden">
+        <div class="mt-12 bg-indigo-900 text-white p-10 rounded-3xl shadow-2xl relative overflow-hidden reveal">
             <div class="relative z-10">
                 <h3 class="text-2xl font-bold mb-4 uppercase text-yellow-400">Phase 6: Deployment & Final Output</h3>
-                <p class="mb-6 opacity-90">The final model was deployed as a <strong>Real-Time API</strong> integrated into the company’s Marketing Dashboard. When a customer is flagged as "High Risk," the system automatically triggers a personalized loyalty discount via email.</p>
-                <div class="inline-block bg-yellow-400 text-indigo-900 px-6 py-2 rounded-full font-bold uppercase tracking-widest text-sm">
-                    Final Result: 5% Expected Increase in Retention
+                <p class="mb-6 opacity-90">The final model was deployed as a <strong>Real-Time API</strong> integrated into the company’s Marketing Dashboard.</p>
+                <div class="inline-block bg-yellow-400 text-indigo-900 px-6 py-2 rounded-full font-bold uppercase tracking-widest text-lg shadow-lg">
+                    Final Result: <span id="stat-number">0</span>% Expected Increase in Retention
                 </div>
             </div>
         </div>
 
-        <div class="mt-16 text-center">
+        <div class="mt-16 text-center reveal">
             <h3 class="font-bold text-indigo-900 mb-6 uppercase tracking-widest">Model Deployment Architecture</h3>
             <img src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&w=800" 
                  alt="Technical Dashboard" 
-                 class="max-w-2xl mx-auto rounded-2xl shadow-2xl border-8 border-white">
+                 class="max-w-2xl mx-auto rounded-2xl shadow-2xl border-8 border-white hover:scale-105 transition duration-500">
         </div>
     </main>
 
     <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm border-t border-gray-800">
         IMC11203 Introduction To Computing & Data Science | Universiti Malaysia Perlis &copy; 2025/2026
     </footer>
+
+    <script>
+        // 1. Scroll Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                    
+                    // Trigger counter if the stat-number is revealed
+                    if (reveals[i].contains(document.getElementById('stat-number'))) {
+                        animateCounter();
+                    }
+                }
+            }
+        }
+
+        // 2. Counter Animation for 5%
+        let counterStarted = false;
+        function animateCounter() {
+            if (counterStarted) return;
+            counterStarted = true;
+            let count = 0;
+            const target = 5;
+            const element = document.getElementById('stat-number');
+            const interval = setInterval(() => {
+                if (count < target) {
+                    count++;
+                    element.innerText = count;
+                } else {
+                    clearInterval(interval);
+                }
+            }, 300);
+        }
+
+        // 3. Simple Alert / Details Modal
+        function showDetails(type) {
+            alert("Project " + type + " includes:\n- Budget Allocation\n- Resource Identification\n- Stakeholder Analysis\n- Timeline (Gantt Chart)");
+        }
+
+        // Listen to scroll
+        window.addEventListener("scroll", reveal);
+        // Run once on load
+        window.onload = reveal;
+    </script>
 </body>
 </html>
