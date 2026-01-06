@@ -6,7 +6,6 @@
     <title>Case Study | CRISP-DM Application</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Animasi Reveal */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -110,7 +109,6 @@
     </footer>
 
     <script>
-        // 1. Scroll Reveal Animation
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
             for (var i = 0; i < reveals.length; i++) {
@@ -120,7 +118,6 @@
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add("active");
                     
-                    // Trigger counter if the stat-number is revealed
                     if (reveals[i].contains(document.getElementById('stat-number'))) {
                         animateCounter();
                     }
@@ -128,7 +125,6 @@
             }
         }
 
-        // 2. Counter Animation for 5%
         let counterStarted = false;
         function animateCounter() {
             if (counterStarted) return;
@@ -146,15 +142,13 @@
             }, 300);
         }
 
-        // 3. Simple Alert / Details Modal
         function showDetails(type) {
             alert("Project " + type + " includes:\n- Budget Allocation\n- Resource Identification\n- Stakeholder Analysis\n- Timeline (Gantt Chart)");
         }
 
-        // Listen to scroll
         window.addEventListener("scroll", reveal);
-        // Run once on load
         window.onload = reveal;
     </script>
 </body>
 </html>
+
