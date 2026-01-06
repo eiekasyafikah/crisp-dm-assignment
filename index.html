@@ -6,7 +6,6 @@
     <title>Home | CRISP-DM Portal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Animasi halus untuk elemen yang akan muncul semasa skrol */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -67,7 +66,6 @@
     </footer>
 
     <script>
-        // 1. TYPEWRITER EFFECT
         const textToType = "It bridges the gap between raw data and actionable business insights.";
         const typingElement = document.getElementById('typing-text');
         let index = 0;
@@ -80,7 +78,6 @@
             }
         }
 
-        // 2. SCROLL REVEAL ANIMATION
         function reveal() {
             const reveals = document.querySelectorAll(".reveal");
             reveals.forEach(window_el => {
@@ -94,7 +91,6 @@
             });
         }
 
-        // 3. COUNTER ANIMATION
         function animateCounter(id, target) {
             let current = 0;
             const increment = target / 100;
@@ -112,17 +108,16 @@
             updateCount();
         }
 
-        // INITIALIZE FUNCTIONS
         window.addEventListener("scroll", reveal);
         
         window.onload = () => {
-            reveal(); // Check for visible elements on load
+            reveal(); 
             playTypewriter();
-            // Start counters
             animateCounter('stat-years', 25);
             animateCounter('stat-steps', 6);
         };
     </script>
 </body>
 </html>
+
 
